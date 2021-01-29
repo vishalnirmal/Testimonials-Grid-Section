@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+body{
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    position: relative;
+}
+.main{
+    width: 77vw;
+    margin: 9rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+}
+.card{
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px hsla(219, 29%, 14%, 0.05),
+                4px 4px 4px hsla(219, 29%, 14%, 0.05),
+                8px 8px 8px hsla(219, 29%, 14%, 0.05),
+                16px 16px 16px hsla(219, 29%, 14%, 0.05),
+                32px 32px 32px hsla(219, 29%, 14%, 0.05);
+}
+.profile-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.65rem;
+}
+.profile-section p{
+    margin: 0.15rem 0;
+}
+.profile-pic{
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.name{
+    font-weight: 500;
+}
+.user-status{
+    opacity: 0.5;
+}
+.testimony{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.story{
+    opacity: 0.7;
+    font-size: 1em;
+    margin: auto 0 0;
+    line-height: 1.25rem;
+}
+.card:nth-child(1){
+    grid-area: 1 / 1 / 1 / span 2;
+    color: hsl(210, 46%, 95%);
+    background: hsl(263, 55%, 52%) url("./images/bg-pattern-quotation.svg") no-repeat top right 5rem;
+}
+.card:nth-child(2){
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);
+}
+.card:nth-child(3){
+    background-color: #fff;
+    color: hsl(219, 29%, 14%);
+}
+.card:nth-child(4){
+    grid-area: 2 / 2 / 2 / span 2;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(210, 46%, 95%);
+}
+.card:nth-child(5){
+    background-color: #fff;
+    color: hsl(219, 29%, 14%);
+    grid-area: 1 / 4 / span 2 / 4;
+}
+@media (max-width: 1200px){
+    .main{
+        width: 92vw;
+        margin: 4.5rem auto;
+    }
+}
+@media (max-width: 900px){
+    .main{
+        grid-template-columns: 1fr;
+        width: 87vw;
+        max-width: 450px;
+        font-size: 12px;
+    }
+    .card{
+        grid-area: initial !important;
+    }
+    .card:nth-child(1){
+        background-position: top right 1.7rem;
+    }
+}
